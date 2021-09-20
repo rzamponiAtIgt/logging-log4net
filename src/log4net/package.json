@@ -1,0 +1,6 @@
+{
+  "name": "com.igt.gga.log4net",
+  "version": "1.0.0",
+  "displayName": "GGA log4net",
+  "description": "This is the intermediate log4net package to support the GGA to UPM transformation."
+}

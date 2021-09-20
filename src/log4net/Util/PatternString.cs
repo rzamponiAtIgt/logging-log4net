@@ -294,7 +294,7 @@ namespace log4net.Util
 
 			s_globalRulesRegistry.Add("appdomain", typeof(AppDomainPatternConverter));
 			s_globalRulesRegistry.Add("date", typeof(DatePatternConverter));
-#if !NETCF
+#if !NETCF && !UNITY
 			s_globalRulesRegistry.Add("env", typeof(EnvironmentPatternConverter));
 #if !NETSTANDARD1_3 // EnvironmentFolderPathPatternConverter not yet supported
 			s_globalRulesRegistry.Add("envFolderPath", typeof(EnvironmentFolderPathPatternConverter));
@@ -311,7 +311,7 @@ namespace log4net.Util
 			s_globalRulesRegistry.Add("utcdate", typeof(UtcDatePatternConverter));
 			s_globalRulesRegistry.Add("utcDate", typeof(UtcDatePatternConverter));
 			s_globalRulesRegistry.Add("UtcDate", typeof(UtcDatePatternConverter));
-#if !NETCF && !NETSTANDARD1_3
+#if !NETCF && !NETSTANDARD1_3 && !UNITY
 			// TODO - have added common variants of casing like utcdate above.
 			// Wouldn't it be better to use a case-insensitive Hashtable?
 			s_globalRulesRegistry.Add("appsetting", typeof(AppSettingPatternConverter));

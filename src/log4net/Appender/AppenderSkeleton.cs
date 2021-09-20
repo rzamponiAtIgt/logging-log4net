@@ -321,7 +321,7 @@ namespace log4net.Appender
 				{
 					ErrorHandler.Error("Failed in DoAppend", ex);
 				}
-#if !MONO && !NET_2_0 && !NETSTANDARD
+#if !MONO && !NET_2_0 && !NETSTANDARD && !UNITY
 				// on .NET 2.0 (and higher) and Mono (all profiles), 
 				// exceptions that do not derive from System.Exception will be
 				// wrapped in a RuntimeWrappedException by the runtime, and as
